@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: edutrack-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_EXPIRE
+        value: 7d
+      - key: MONGODB_URI
+        sync: false # You will be prompted to enter this
+      - key: JWT_SECRET
+        sync: false # You will be prompted to enter this
+
+  - type: web
+    name: edutrack-frontend
+    env: static
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        sync: false # You will enter the backend URL here (e.g., https://edutrack-backend-xxxx.onrender.com/api)
