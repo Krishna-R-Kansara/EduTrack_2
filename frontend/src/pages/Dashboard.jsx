@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useAuth } from '../context/AuthContext';
-import { academicAPI, financeAPI, taskAPI, noteAPI } from '../utils/api';
+import { subjectAPI, financeAPI, taskAPI, noteAPI } from '../utils/api';
 import '../styles/Dashboard.css';
 
 function Dashboard() {
     const { user } = useAuth();
     const [stats, setStats] = useState({
-        academics: 0,
+        curriculum: 0,
         finances: 0,
         tasks: 0,
         notes: 0
@@ -27,15 +27,15 @@ function Dashboard() {
 
     const loadStats = async () => {
         try {
-            const [academicRes, financeRes, taskRes, noteRes] = await Promise.all([
-                academicAPI.getAll(),
+            const [curriculumRes, financeRes, taskRes, noteRes] = await Promise.all([
+                subjectAPI.getAll(),
                 financeAPI.getAll(),
                 taskAPI.getAll(),
                 noteAPI.getAll()
             ]);
 
             setStats({
-                academics: academicRes.data?.length || 0,
+                curriculum: curriculumRes.data?.length || 0,
                 finances: financeRes.data?.length || 0,
                 tasks: taskRes.data?.filter(t => t.status !== 'Completed').length || 0,
                 notes: noteRes.data?.length || 0
@@ -86,7 +86,7 @@ function Dashboard() {
                         <div className="stat-icon blue">📚</div>
                         <div className="stat-info">
                             <h3>Academic Records</h3>
-                            <div className="stat-value">{loading ? '...' : stats.academics}</div>
+                            <div className="stat-value">{loading ? '...' : stats.curriculum}</div>
                         </div>
                     </div>
 
@@ -119,10 +119,10 @@ function Dashboard() {
                 <div className="quick-actions">
                     <h2>Quick Actions</h2>
                     <div className="actions-grid">
-                        <Link to="/academic" className="action-card">
+                        <Link to="/curriculum" className="action-card">
                             <div className="action-icon">📚</div>
-                            <h3>View Academics</h3>
-                            <p>Track your grades & performance</p>
+                            <h3>View Curriculum</h3>
+                            <p>Track your courses & performance</p>
                         </Link>
 
                         <Link to="/finance" className="action-card">

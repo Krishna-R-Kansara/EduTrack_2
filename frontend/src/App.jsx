@@ -13,6 +13,8 @@ import Academic from './pages/Academic';
 import Finance from './pages/Finance';
 import Tasks from './pages/Tasks';
 import Notes from './pages/Notes';
+import Curriculum from './pages/Curriculum';
+import CurriculumCharts from './pages/CurriculumCharts';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
@@ -48,6 +50,12 @@ function App() {
             } />
             <Route path="/notes" element={
               <ProtectedRoute><Notes /></ProtectedRoute>
+            } />
+            <Route path="/curriculum" element={
+              <ProtectedRoute><Curriculum /></ProtectedRoute>
+            } />
+            <Route path="/curriculum/charts" element={
+              <ProtectedRoute><CurriculumCharts /></ProtectedRoute>
             } />
             <Route path="/about" element={
               <ProtectedRoute><About /></ProtectedRoute>

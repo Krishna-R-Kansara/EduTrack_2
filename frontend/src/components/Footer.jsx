@@ -19,17 +19,17 @@ function Footer() {
                 <div className="footer-section">
                     <h4>Quick Links</h4>
                     <ul className="footer-links">
-                        <li><Link to="/dashboard">Dashboard</Link></li>
-                        <li><Link to="/academic">Academic</Link></li>
+                        <li><Link to="/curriculum">Curriculum</Link></li>
                         <li><Link to="/finance">Finance</Link></li>
                         <li><Link to="/tasks">Tasks</Link></li>
+                        <li><Link to="/notes">Notes</Link></li>
                     </ul>
                 </div>
 
                 <div className="footer-section">
                     <h4>Resources</h4>
                     <ul className="footer-links">
-                        <li><Link to="/notes">Notes</Link></li>
+                        <li><Link to="/dashboard">Dashboard</Link></li>
                         <li><Link to="/about">About Us</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
                     </ul>
@@ -37,13 +37,9 @@ function Footer() {
 
                 <div className="footer-section">
                     <h4>Connect</h4>
-                    <p>📧 support@edutrack.com</p>
-                    <p>📞 +91 1234567890</p>
+                    <p>📧 supportedutrack@gmail.com</p>
+                    <p>📞 +91 8764066242</p>
                     <div className="social-links">
-                        <a href="#" aria-label="Facebook">📘</a>
-                        <a href="#" aria-label="Twitter">🐦</a>
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="LinkedIn">💼</a>
                     </div>
                 </div>
             </div>

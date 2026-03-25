@@ -1,28 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Module.css';
 
 function Contact() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
-    const [submitted, setSubmitted] = useState(false);
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setSubmitted(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        setTimeout(() => setSubmitted(false), 5000);
-    };
-
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
     return (
         <>
             <Navbar />
@@ -32,74 +13,9 @@ function Contact() {
                         <h1>Contact Us</h1>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px', maxWidth: '1000px', margin: '0 auto' }}>
-                        {/* Contact Form */}
-                        <div className="card">
-                            <h2 style={{ color: '#0B5ED7', marginBottom: '20px' }}>Get in Touch 📧</h2>
-
-                            {submitted && (
-                                <div className="alert alert-success" style={{ marginBottom: '20px' }}>
-                                    Thank you! We'll get back to you soon! 🎉
-                                </div>
-                            )}
-
-                            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                                <div>
-                                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', color: '#334155' }}>Name</label>
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        placeholder="Your name"
-                                        required
-                                    />
-                                </div>
-
-                                <div>
-                                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', color: '#334155' }}>Email</label>
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        placeholder="your.email@example.com"
-                                        required
-                                    />
-                                </div>
-
-                                <div>
-                                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', color: '#334155' }}>Subject</label>
-                                    <input
-                                        type="text"
-                                        name="subject"
-                                        value={formData.subject}
-                                        onChange={handleChange}
-                                        placeholder="What's this about?"
-                                        required
-                                    />
-                                </div>
-
-                                <div>
-                                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', color: '#334155' }}>Message</label>
-                                    <textarea
-                                        name="message"
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                        placeholder="Tell us more..."
-                                        rows="6"
-                                        required
-                                    />
-                                </div>
-
-                                <button type="submit" className="btn btn-primary" style={{ marginTop: '8px' }}>
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
-
+                    <div style={{ display: 'flex', justifyContent: 'center', maxWidth: '1000px', margin: '0 auto' }}>
                         {/* Contact Information */}
-                        <div className="card">
+                        <div className="card" style={{ maxWidth: '600px', width: '100%' }}>
                             <h2 style={{ color: '#F97316', marginBottom: '20px' }}>Contact Information</h2>
 
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -145,7 +61,7 @@ function Contact() {
                                     textAlign: 'center'
                                 }}>
                                     <p style={{ color: 'white', fontSize: '16px', fontWeight: '600', margin: 0 }}>
-                                        We usually respond within 24 hours! ⚡
+                                        Reach out to us anytime! ⚡
                                     </p>
                                 </div>
                             </div>

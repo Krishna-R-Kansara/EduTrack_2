@@ -49,7 +49,7 @@ function Signup() {
                 formData.password,
                 formData.studentId
             );
-
+            console.log(response)
             if (response.success) {
                 signup(response.user, response.token);
                 navigate('/dashboard');

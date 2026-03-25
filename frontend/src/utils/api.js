@@ -212,3 +212,47 @@ export const noteAPI = {
         return handleResponse(response);
     }
 };
+
+// Subject API
+export const subjectAPI = {
+    getAll: async () => {
+        const response = await fetch(`${API_URL}/subjects`, {
+            headers: getAuthHeader()
+        });
+        return handleResponse(response);
+    },
+
+    create: async (data, isFormData = false) => {
+        const headers = getAuthHeader();
+        if (!isFormData) headers['Content-Type'] = 'application/json';
+
+        const response = await fetch(`${API_URL}/subjects`, {
+            method: 'POST',
+            headers,
+            body: isFormData ? data : JSON.stringify(data)
+        });
+        return handleResponse(response);
+    },
+
+    update: async (id, data, isFormData = false) => {
+        const headers = getAuthHeader();
+        if (!isFormData) headers['Content-Type'] = 'application/json';
+        
+        const response = await fetch(`${API_URL}/subjects/${id}`, {
+            method: 'PUT',
+            headers,
+            body: isFormData ? data : JSON.stringify(data)
+        });
+        return handleResponse(response);
+    },
+
+    delete: async (id) => {
+        const response = await fetch(`${API_URL}/subjects/${id}`, {
+            method: 'DELETE',
+            headers: getAuthHeader()
+        });
+        return handleResponse(response);
+    }
+};
+
+

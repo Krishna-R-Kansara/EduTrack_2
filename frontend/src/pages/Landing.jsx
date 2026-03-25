@@ -24,7 +24,7 @@ function Landing() {
                     <h1><span style={{ color: '#0B5ED7' }}>Edu</span>
                         <span style={{ color: '#F97316' }}>Track</span>
                     </h1>
-                    <p>Where Academic Excellence Meets Smart Organization 🚀</p>
+                    <p>Where Curriculum Excellence Meets Smart Organization 🚀</p>
                     <div className="hero-buttons">
                         <button className="btn btn-primary" onClick={() => navigate('/login')}>
                             Login
@@ -42,8 +42,8 @@ function Landing() {
                 <div className="services-grid">
                     <div className="service-card">
                         <div className="service-icon">📚</div>
-                        <h3>Academic Mastery</h3>
-                        <p>Track grades, visualize your progress, and stay ahead of the curve with intelligent academic insights.</p>
+                        <h3>Curriculum Mastery</h3>
+                        <p>Track grades, visualize your progress, and stay ahead of the curve with intelligent curriculum insights.</p>
                     </div>
 
                     <div className="service-card">

@@ -16,27 +16,27 @@ function About() {
                     <div className="card" style={{ maxWidth: '900px', margin: '0 auto' }}>
                         <h2 style={{ color: '#0B5ED7', marginBottom: '20px' }}>Welcome to EduTrack! 🎓</h2>
 
-                        <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#475569', marginBottom: '20px' }}>
+                        <p style={{ fontSize: '16px', lineHeight: '1.8', color: 'var(--gray-600)', marginBottom: '20px' }}>
                             EduTrack is your all-in-one integrated student management system designed to help students
-                            organize their academic life, manage finances, track tasks, and keep notes all in one place.
+                            organize their curriculum, manage finances, track tasks, and keep notes all in one place.
                         </p>
 
                         <h3 style={{ color: '#F97316', marginTop: '32px', marginBottom: '16px' }}>Our Mission</h3>
-                        <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#475569', marginBottom: '20px' }}>
-                            We believe that students deserve powerful yet simple tools to excel in their academic journey.
-                            EduTrack was built by students, for students, to make academic life more organized and stress-free.
+                        <p style={{ fontSize: '16px', lineHeight: '1.8', color: 'var(--gray-600)', marginBottom: '20px' }}>
+                            We believe that students deserve powerful yet simple tools to excel in their learning journey.
+                            EduTrack was built by students, for students, to make student life more organized and stress-free.
                         </p>
 
                         <h3 style={{ color: '#10B981', marginTop: '32px', marginBottom: '16px' }}>Key Features</h3>
-                        <ul style={{ fontSize: '16px', lineHeight: '2', color: '#475569', paddingLeft: '24px' }}>
-                            <li><strong>📚 Academic Tracking:</strong> Monitor grades, track performance, and visualize your academic progress</li>
+                        <ul style={{ fontSize: '16px', lineHeight: '2', color: 'var(--gray-600)', paddingLeft: '24px' }}>
+                            <li><strong>📚 Curriculum Tracking:</strong> Monitor grades, track performance, and visualize your curriculum progress</li>
                             <li><strong>💰 Financial Management:</strong> Keep track of income and expenses with smart budgeting tools</li>
                             <li><strong>✅ Task Management:</strong> Organize tasks, set priorities, and never miss a deadline</li>
                             <li><strong>📝 Notes App:</strong> Create, organize, and access your study notes from anywhere</li>
                         </ul>
 
                         <h3 style={{ color: '#0B5ED7', marginTop: '32px', marginBottom: '16px' }}>Built with Modern Technology</h3>
-                        <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#475569', marginBottom: '20px' }}>
+                        <p style={{ fontSize: '16px', lineHeight: '1.8', color: 'var(--gray-600)', marginBottom: '20px' }}>
                             EduTrack is built using the MERN stack (MongoDB, Express.js, React, Node.js) ensuring a
                             fast, secure, and reliable experience. Your data is encrypted and stored securely.
                         </p>
